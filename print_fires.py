@@ -8,5 +8,6 @@ fires_column = 3
 file_name = 'Agrofood_co2_emission.csv'
 
 # Call function and print results
-fires = my_utils.get_column(file_name, country_column, country, fires_column)
+fires = my_utils.get_column(file_name, country_column, country,
+                            result_column=fires_column)
 print(fires)
