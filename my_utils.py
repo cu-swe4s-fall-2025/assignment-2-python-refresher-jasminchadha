@@ -1,6 +1,29 @@
 def get_column(file_name, query_column, query_value, result_column=1):
+    """
+    Returns an array of all values in a results column associated with
+    matched query column and query value results.
+
+    Args:
+    file_name (str): Name of the file.
+    query_column (any): Column to test matching with.
+    query_value (any): Column to test matching with query_column.
+    result_column (int): Column in the data set associated
+                          with the intended result values.
+
+    Returns:
+    resultsarray (int): An array of result values associated
+                        with matched query column and query value results.
+    """
+
     # Open file for reading
-    f = open(file_name, 'r')
+    try:
+        f = open(file_name, 'r')
+    except FileNotFoundError:
+        print('Could not find ' + file_name)
+        return []
+    except PermissionError:
+        print('Could not open ' + file_name)
+        return []
 
     # Initialize array for results
     resultsarray = []
@@ -19,6 +42,13 @@ def get_column(file_name, query_column, query_value, result_column=1):
 
     # Close the file
     f.close()
+
+    # Convert all values in resultsarray to integers
+    try:
+        resultsarray = [int(float(value)) for value in resultsarray]
+    except ValueError:
+        print('Could not convert some values to integers.')
+        return []
 
     # Return resultsarray so it can be used outside the function
     return resultsarray
