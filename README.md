@@ -1,6 +1,14 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/_G_SdF8U)
 # python-refresher
 
+# Creating test_my_utils.py and test_print_fires.sh (09/30/2025)
+1. test_my_utils.py: created unit tests with randomness and positive and negative values for mean, median, and standard deviation functions in my_utils.py.
+2. test_print_fires.sh: created a test data file to use Stupid Simple BaSh Testing that includes functional tests for exit codes and different operations in print_fires.py.
+
+# Updating my_utils.py and print_fires.py (09/30/2025)
+1. my_utils.py: added new functions to find the mean, median, and standard deviation for an array of integers.
+2. print_fires.py: added a command line argument to specify an operation (mean, median, standard deviation) for the returned array.
+
 # Updating print_fires.py, my_utils.py, and run.sh (09/15/2025)
 1. Utilized argparse to pass in function arguments via the command line in print_fires.py. Added main function to print_fires.py. Added documentation for main function.
 2. Updated the function get_column in my_utils.py to convert all values in resultsarray to integers. Added exceptions to throw errors for incorrect file reading or integer conversion. Added documentation for get_column function.
