@@ -1,4 +1,8 @@
+import sys
 import unittest
+
+sys.path.append('../') # noqa
+
 import numpy as np
 import my_utils
 import random
