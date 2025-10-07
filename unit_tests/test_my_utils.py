@@ -1,4 +1,8 @@
+import sys
 import unittest
+
+sys.path.append('src/')  # noqa
+
 import numpy as np
 import my_utils
 import random
@@ -47,3 +51,7 @@ class TestCalc(unittest.TestCase):
     def test_sd_pos(self):
         rand_data = [random.randint(5, 150) for _ in range(15)]
         self.assertAlmostEqual(my_utils.sd_func(rand_data), np.std(rand_data))
+
+
+if __name__ == '__main__':
+    unittest.main()
