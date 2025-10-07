@@ -1,7 +1,7 @@
 import sys
 import unittest
 
-sys.path.append('../')  # noqa
+sys.path.append('src/')  # noqa
 
 import numpy as np
 import my_utils
