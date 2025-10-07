@@ -11,11 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: pip install numpy
       - run: python unit_tests/test_my_utils.py
   run_func_test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: pip install numpy
       - run: bash func_tests/test_print_fires.sh
   run_style_check:
     runs-on: ubuntu-latest
